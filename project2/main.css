@@ -51,7 +51,7 @@ p.caption {
 }
 
 .container {
-	margin: 8em 16vw 10em 16vw;
+	margin: 8em 16vw 40em 16vw;
 	padding: 5rem 5rem 5rem 5rem;
 	color: #000;
 }
@@ -82,7 +82,7 @@ a:hover {
 .arrow a {
 	position: fixed;
 	bottom: 0%;
-	left: 42%;
+	left: 44%;
 
 	font-size: 12vw;
 }
