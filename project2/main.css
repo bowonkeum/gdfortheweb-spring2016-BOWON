@@ -7,7 +7,6 @@ html {
 
 body {
 	font-family: 'Times';
-	font-weight: 400;
 	background-color: #131313;
 	text-align: center;
 }
@@ -32,7 +31,6 @@ p {
 	font-family: 'Courier New';
 	margin: 0;
 	text-indent: 2.5em;
-	border: none;
 	font-size: 1.2rem;
 	line-height: 1.3em;
 	text-align: left;
@@ -48,6 +46,7 @@ p:last-of-type {
 
 p.caption {
 	margin-bottom: 2em;
+	text-indent: 0em;
 	text-align: center;
 }
 
@@ -93,8 +92,9 @@ a:hover {
 }
 
 img {
-	opacity: 0.75;
+	opacity: 0.8;
 	width: 400px;
+	margin-top: 2em;
 }
 
 
