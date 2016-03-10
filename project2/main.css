@@ -110,8 +110,8 @@ a:hover {
 		box-shadow: 0em 0em 10em 0em #f00;
 	}
 
-	.container:active {
-		box-shadow: 0em 0em 10em 0em #0ff;
+	.arrow a:hover {
+		color: #f00;
 	}
 
 
