@@ -49,7 +49,7 @@ sup {
 }
 
 .container {
-	margin: 4em 16em 3.5em 16em;
+	margin: 4em 16vw 3.5em 16vw;
 	padding: 5rem 5rem 5rem 5rem;
 	color: #000;
 }
@@ -98,10 +98,14 @@ a:hover {
 }
 
 /* tablet */
-@media only screen and (max-width: 500px) {
+@media (max-width: 1200px) {
 
-.container {
+	.container {
+		color: #000;
+
 		background-color: #eee;
-		box-shadow: 0em 0em 10em 0em #0ff;
-}
+		box-shadow: 0em 0em 10em 0em #f00;
+	}
+
+
 }
