@@ -46,10 +46,9 @@ p:last-of-type {
 	margin-bottom: 5em;
 }
 
-sup {
-	font-size: 0.75rem;
-	vertical-align: baseline;
-	border-bottom: solid 1px black;
+p.caption {
+	margin-bottom: 2em;
+	text-align: center;
 }
 
 .container {
@@ -63,12 +62,9 @@ sup {
 	box-shadow: 0em 0em 10em 0em #0ff;
 }
 
-ul {
-	list-style-type: none;
-	text-align: center;
-}
-
 li {
+	list-style-type: none;
+	text-align: center;	
 	font-family: 'Times';
 	font-size: 7em;
 }
@@ -96,10 +92,11 @@ a:hover {
 	font-size: 8rem;
 }
 
-.arrow a:hover {
-	color: #eee;
-	text-decoration: none;
+img {
+	opacity: 0.75;
+	width: 400px;
 }
+
 
 /* tablet */
 @media (max-width: 1200px) {
@@ -113,10 +110,4 @@ a:hover {
 		background-color: #eee;
 		box-shadow: 0em 0em 10em 0em #f00;
 	}
-
-	.arrow a:hover {
-		color: #f00;
-	}
-
-
 }
