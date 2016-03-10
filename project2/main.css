@@ -61,12 +61,12 @@ sup {
 
 ul {
 	list-style-type: none;
+	text-align: center;
 }
 
 li {
 	font-family: 'Times';
 	font-size: 7em;
-	text-align: center;
 }
 
 a, a:visited {
@@ -102,6 +102,9 @@ a:hover {
 
 	.container {
 		color: #000;
+
+		margin-top: 40vw;
+		margin-bottom: 40vw;
 
 		background-color: #eee;
 		box-shadow: 0em 0em 10em 0em #f00;
