@@ -1,7 +1,7 @@
 body {
 	margin: 0 0 0 0;
 	font-family: Times;
-	background-color: white;
+	background-color: black;
 	width: 100%;
 	height: 100%;
 	color: black;
@@ -9,7 +9,6 @@ body {
 }
 
 .nav {
-	z-index: 1000;
 	width: 100%;
 	height: 100%;
 }
@@ -24,7 +23,7 @@ body {
 	color: black;
 
 	width: 200px;
-	border-bottom: solid 6px black;
+	border-bottom: solid 6px white;
 }
 
 .nav a:hover {
@@ -59,11 +58,9 @@ body {
 	left: 50%;
 }
 
-/********/
-
-.square {
+.page {
 	position: fixed;
-	top: 15%;
+	top: 17%;
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -71,21 +68,11 @@ body {
 	width: 50%;
 	height: 70%;
 
-	background-color: rgba(0,0,0,0.8);
-	/*border: solid 5px black;*/
-}
+	background-color: #eee;
 
-.page {
-	position: relative;
-	top: -75%;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: 0 auto;
-	width: 80%;
-	height: 100%;
+	overflow: scroll;
 
-	overflow: visible;
+	padding: 0 4em 0 4em;
 }
 
 .page h1 {
