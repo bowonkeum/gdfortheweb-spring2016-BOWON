@@ -6,38 +6,93 @@ html {
 }
 
 body {
-	background-color: #eee;
-	font-family: 'Helvetica';
+	font-family: 'Courier New';
 	font-weight: 400;
+	background-color: #131313;
+}
+
+h1, h2 {
+	font-family: 'Times';
 }
 
 h1 {
-	font-family: 'Impact';
-	text-transform: uppercase;
-	font-size: 12em;
+	font-size: 10rem;
 	font-weight: 400;
 	line-height: 0.9em;
 	letter-spacing: -0.0225em;
-	margin: 1em 0 0.5em -1em;
-}
-
-h1:hover {
-	color: #99FFE6;
-	background-color: black;
+	text-align: center;
 }
 
 h2 {
-	margin: 0.25em 0 0 0;
+	text-transform: uppercase;
+	font-size: 2rem;
 }
 
 p {
 	margin: 0;
-	font-size: 1em;
-	line-height: 1.5em;
+	text-indent: 2.5em;
+	border: none;
+	font-size: 1.2rem;
+	line-height: 1.3em;
 	word-spacing: 0em;
-	letter-spacing: 0.02em;
+	letter-spacing: 0em;
+}
+
+p:first-of-type {
+	text-indent: 0em;
+}
+
+sup {
+	font-size: 0.75rem;
+	vertical-align: baseline;
+	border-bottom: solid 1px black;
 }
 
 .container {
-	margin: 0 10em 0 30em;
+	margin: 4em 16em 3.5em 16em;
+	padding: 5rem 5rem 5rem 5rem;
+	color: #000;
+}
+
+.container:hover {
+	background-color: #eee;
+	box-shadow: 0em 0em 10em 0em #0ff;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	font-family: 'Times';
+	font-size: 7em;
+	text-align: center;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+	letter-spacing: -0.0225em;
+}
+
+a:hover {
+	text-decoration: line-through;
+}
+
+.arrow a {
+	width: 200px;
+	text-align: center;
+	position: fixed;
+	top: 80%;
+	left: 50%;
+	margin-left: -100px;
+
+	color: black;
+	font-size: 8rem;
+}
+
+.arrow a:hover {
+	color: #eee;
+	text-decoration: none;
 }
