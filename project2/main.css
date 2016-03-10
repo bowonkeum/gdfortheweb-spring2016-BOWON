@@ -80,34 +80,34 @@ a:hover {
 }
 
 .arrow a {
-	width: 200px;
-	text-align: center;
 	position: fixed;
-	top: 80%;
-	left: 50%;
-	margin-left: -100px;
+	bottom: 0%;
+	left: 42%;
 
-	color: black;
-	font-size: 8rem;
+	font-size: 16vw;
+}
+
+.arrow a:hover {
+	color: white;
+	text-decoration: none;
 }
 
 img {
 	opacity: 0.8;
-	width: 400px;
+	width: 500px;
 	margin-top: 2em;
 }
 
-
-/* tablet */
 @media (max-width: 1200px) {
 
 	.container {
-		color: #000;
-
 		margin-top: 40vw;
 		margin-bottom: 40vw;
-
 		background-color: #eee;
 		box-shadow: 0em 0em 10em 0em #f00;
+	}
+
+	img {
+		width: 100%;
 	}
 }
