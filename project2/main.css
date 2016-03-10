@@ -98,18 +98,15 @@ img {
 	margin-top: 2em;
 }
 
-@media (max-width: 1200px) {
-
+@media (max-width: 1200px){
 	p {
 		font-size: 18pt;
 	}
-
 	.container {
-		margin: 40vw 5vw 40vw 5vw;
+		margin: 40vw 10vw 40vw 10vw;
 		background-color: #eee;
 		box-shadow: 0em 0em 10em 0em #f00;
 	}
-
 	img {
 		width: 100%;
 		opacity: 1;
