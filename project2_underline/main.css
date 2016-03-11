@@ -1,16 +1,11 @@
 body {
-	margin: 0 0 0 0;
+	margin: 0;
 	background-color: white;
 	font-family: Times;
 	width: 100%;
 	height: 100%;
 	color: black;
 	text-align: center;
-}
-
-.nav {
-	width: 100%;
-	height: 100%;
 }
 
 .nav a {
@@ -22,13 +17,27 @@ body {
 	text-transform: uppercase;
 	color: black;
 
-	width: 200px;
+	width: 250px;
 	border-bottom: solid 6px black;
 }
 
 .nav a:hover {
-	color: white;
+	display: white;
 }
+
+/********/
+.red {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+.green {
+	background-color: rgba(0,255,0,0.5);
+}
+
+.blue {
+	background-color: rgba(0,0,255,0.5);
+}
+/********/
 
 .top, .right, .left, .bottom {
 	position: fixed;
@@ -59,6 +68,8 @@ body {
 	left: 50%;
 }
 
+/********/
+
 .square {
 	position: fixed;
 	top: 15%;
@@ -68,25 +79,26 @@ body {
 	margin: 0 auto;
 	width: 50%;
 	height: 70%;
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0, 0.95);
 }
 
 .page {
 	position: relative;
-	top: -75%;
+	top: 25%;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	margin: 0 auto;
+
 	width: 80%;
-	overflow: visible;
+	height: 75%;
 }
 
 .page h1 {
 	margin: 0;
 	font-size: 6.5em;
 	line-height: 0.95em;
-	letter-spacing: -0.025em;
+	letter-spacing: -0.01em;
 	text-transform: uppercase;
 	font-weight: 400;
 }
