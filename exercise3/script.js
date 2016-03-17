@@ -1,44 +1,37 @@
-// //variables
-// var name = "Bo-Won";
-// var zip = 10001;
-// var greeting = "Hello " + name;
-
-
-// //function
-// function sayHello () {
-// 	console.log(greeting);
-// }
-
-// sayHello();
-
-// //first function is hovered
-// //second function is unhovered
-// $("h1").hover(function() {
-// 	$(this).html("Hovered");
-// 	$(this).addClass("hovered");
-// 	$("html").addClass("background");
-// }, 
-// 	function() {
-// 	$(this).html("Unhovered");
-// 	$(this).removeClass("hovered");
-// 	$("html").removeClass("background");
-// });
-
-// $("h1").click(function() {
-// 	$(this).toggleClass("clicked");
-
-// 	var randNumber = Math.random() * 100;
-// 	console.log(randNumber);
-
-// 	$(this).css("font-size", randNumber + "px");
-// });
-
 for (i = 0; i < 100; i++) {
-	$("body").append("<div></div>");
+	$("body").append("<div>YO</div>");
 }
 
+//hover
 $("div").hover(function () {
-	var rando = Math.floor(Math.random() * 100);
 
-	$(this).css("width", rando + "px");
+	// $(this).html("YO");
+}, function () {
+	$(this).html("DUDE");
+});
+
+//click
+// $("div").click(function () {
+// 	$(this).css({
+// 		transform: 'skew(' + randoNum + 'deg,' + randoNum2 + 'deg)'
+// 	})
+// });
+
+//click
+$("div").click(function () {
+
+	var randoNum = Math.floor(Math.random() * 1000);
+	var randoNum2 = Math.floor(Math.random()* 10);
+
+	$(this).css("transform", 'scale(' + randoNum2 + ') ' + 'skewX(' + randoNum + 'deg)');
+
+
+// $(this).css({
+// 		transform: 'skew(' + randoNum + 'deg)'
+// 	})
+
+// 			transform: 'scale(' + randoNum2 + ')'
+
+	console.log(randoNum);
+	console.log(randoNum2);
 });

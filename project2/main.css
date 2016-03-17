@@ -1,114 +1,171 @@
-html {
-	margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
 body {
-	font-family: 'Times';
-	background-color: #131313;
+	margin: 0;
+	background-color: white;
+	font-family: Times;
+	width: 100%;
+	height: 100%;
+	color: black;
 	text-align: center;
 }
 
-h1 {
-	margin: 0 0 0.5em 0;
-	font-size: 10vw;
-	line-height: 0.9em;
-	font-weight: 400;
-	letter-spacing: -0.0225em;
+/********/
+.red {
+	background-color: rgba(255, 0, 0, 0.5);
 }
 
-h2 {
-	margin: 0 0 3em 0;
+.green {
+	background-color: rgba(0,255,0,0.5);
+}
+
+.blue {
+	background-color: rgba(0,0,255,0.5);
+}
+
+.black {
+	background-color: rgba(0,0,0,0.3);
+}
+/********/
+
+.nav a {
+	font-family: Helvetica;
+	font-size: 2.5em;
+	letter-spacing: 0.025em;
+	font-weight: 800;
+	text-decoration: none;
 	text-transform: uppercase;
-	letter-spacing: 0.0225em;
-	font-size: 1.5rem;
+	color: black;
+
+	width: 320px;
+	border-bottom: solid 6px black;
+}
+
+.nav a:hover {
+	display: white;
+}
+
+.top, .right, .left, .bottom {
+	position: fixed;
+	z-index: 1000;
+}
+
+.top {
+	margin-left: -100px;
+	top: 5%;
+	left: 45%;
+}
+
+.right {
+	top: 50%;
+	right: 0%;
+	-webkit-transform: rotate(90deg);
+}
+
+.left {
+	top: 50%;
+	left: 0%;
+	-webkit-transform: rotate(-90deg);
+}
+
+.bottom {
+	margin-left: -100px;
+	bottom: 5%;
+	left: 45%;
+}
+
+/********/
+
+.square {
+	position: fixed;
+	top: 15%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+	width: 50%;
+	height: 70%;
+	border: solid 5px black;
+	/*background-color: rgba(0,0,0, 0.95);*/
+}
+
+.page {
+	position: relative;
+	top: 26%;
+	margin: 0 auto;
+
+	width: 60%;
+	height: 75%;
+	opacity: 0%;
+	color: rgba(255, 0, 0, 0.5);
+}
+/*
+.page:hover {
+	color: black;
+}
+*/
+.page h1 {
+	margin: 0;
+	font-size: 6.5em;
+	line-height: 0.95em;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
 	font-weight: 400;
 }
 
-p {
-	font-family: 'Courier New';
-	margin: 0;
-	text-indent: 2.5em;
-	font-size: 1.2rem;
-	line-height: 1.3em;
-	text-align: left;
+.page h2 {
+	font-size: 3em;
+	font-weight: 400;
+	letter-spacing: -0.025em;
 }
 
-p:first-of-type {
+.page p {
+	margin: 0;
+	text-indent: 2em;
+	text-align: left;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+.page p:first-of-type {
 	text-indent: 0em;
 }
 
-p:last-of-type {
+.page p:last-of-type {
 	margin-bottom: 5em;
 }
 
-p.caption {
-	margin-bottom: 2em;
-	text-indent: 0em;
-	text-align: center;
+.page p.quote {
+	font-style: italic;
+	letter-spacing: -0.02em;
 }
 
-.container {
-	margin: 8em 16vw 40em 16vw;
-	padding: 5rem 5rem 5rem 5rem;
-	color: #000;
+.page p.quote-author {
+	text-align: right;
+	margin-bottom: 3em;
 }
 
-.container:hover {
-	background-color: #eee;
-	box-shadow: 0em 0em 10em 0em #0ff;
-}
-
-li {
-	list-style-type: none;
-	text-align: center;	
-	font-family: 'Times';
-	font-size: 7em;
-}
-
-a, a:visited {
-	text-decoration: none;
-	color: inherit;
-	font-size: inherit;
-	letter-spacing: -0.0225em;
-}
-
-a:hover {
-	text-decoration: line-through;
-}
-
-.arrow a {
+.image-one, .image-two, .image-three, .image-four {
 	position: fixed;
-	bottom: 0%;
-	left: 44%;
-
-	font-size: 12vw;
-}
-
-.arrow a:hover {
-	color: white;
-	text-decoration: none;
-}
-
-img {
-	opacity: 0.8;
 	width: 500px;
-	margin-top: 2em;
+	height: 300px;
+	background-color: yellow;
 }
 
-@media (max-width: 1200px){
-	p {
-		font-size: 18pt;
-	}
-	.container {
-		margin: 40vw 10vw 60vw 10vw;
-		background-color: #eee;
-		box-shadow: 0em 0em 10em 0em #f00;
-	}
-	img {
-		width: 100%;
-		opacity: 1;
-	}
+.image-one {
+	top: -17.5%;
+	left: -17.5%;
+}
+
+.image-two {
+	top: -17.5%;
+	right: -17.5%;
+}
+
+.image-three {
+	bottom: -17.5%;
+	right: -17.5%;
+}
+
+.image-four {
+	bottom: -17.5%;
+	left: -17.5%;
 }
