@@ -20,6 +20,10 @@ body {
 .blue {
 	background-color: rgba(0,0,255,0.5);
 }
+
+.black {
+	background-color: rgba(0,0,0,0.3);
+}
 /********/
 
 .nav a {
