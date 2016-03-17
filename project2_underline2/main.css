@@ -90,6 +90,12 @@ body {
 
 	width: 72.5%;
 	height: 75%;
+	opacity: 0%;
+	color: rgba(255, 0, 0, 0.5);
+}
+
+.page:hover {
+	color: rgba(255, 255, 255, 0.5);
 }
 
 .page h1 {
@@ -131,4 +137,13 @@ body {
 .page p.quote-author {
 	text-align: right;
 	margin-bottom: 3em;
+}
+
+.image-one {
+	position: fixed;
+	top: -25%;
+	left: -25%;
+	width: 500px;
+	height: 300px;
+	background-color: yellow;
 }
