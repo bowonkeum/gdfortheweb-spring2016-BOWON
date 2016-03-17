@@ -31,7 +31,7 @@ body {
 	text-transform: uppercase;
 	color: black;
 
-	width: 250px;
+	width: 320px;
 	border-bottom: solid 6px black;
 }
 
@@ -47,7 +47,7 @@ body {
 .top {
 	margin-left: -100px;
 	top: 5%;
-	left: 50%;
+	left: 45%;
 }
 
 .right {
@@ -65,7 +65,7 @@ body {
 .bottom {
 	margin-left: -100px;
 	bottom: 5%;
-	left: 50%;
+	left: 45%;
 }
 
 /********/
