@@ -88,16 +88,16 @@ body {
 	top: 26%;
 	margin: 0 auto;
 
-	width: 72.5%;
+	width: 60%;
 	height: 75%;
 	opacity: 0%;
 	color: rgba(255, 0, 0, 0.5);
 }
-
+/*
 .page:hover {
-	color: rgba(255, 255, 255, 0.5);
+	color: black;
 }
-
+*/
 .page h1 {
 	margin: 0;
 	font-size: 6.5em;
@@ -139,11 +139,29 @@ body {
 	margin-bottom: 3em;
 }
 
-.image-one {
+.image-one, .image-two, .image-three, .image-four {
 	position: fixed;
-	top: -25%;
-	left: -25%;
 	width: 500px;
 	height: 300px;
 	background-color: yellow;
+}
+
+.image-one {
+	top: -17.5%;
+	left: -17.5%;
+}
+
+.image-two {
+	top: -17.5%;
+	right: -17.5%;
+}
+
+.image-three {
+	bottom: -17.5%;
+	right: -17.5%;
+}
+
+.image-four {
+	bottom: -17.5%;
+	left: -17.5%;
 }
