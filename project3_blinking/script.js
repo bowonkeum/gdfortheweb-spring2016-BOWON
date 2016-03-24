@@ -11,11 +11,10 @@ function getRandomInt(min, max) {
 }
 
 //lunaMaurer
-//future note: I can put parameters for MAX threshold
-function lunaMaurer () {
+function lunaMaurer (shapeWidth, shapeHeight) {
 
-	var PosX = getRandomInt(0, vWidth-800);
-	var PosY = getRandomInt(0, vHeight-400);
+	var PosX = getRandomInt(0, vWidth-shapeWidth);
+	var PosY = getRandomInt(0, vHeight-shapeHeight);
 
 	console.log("LM PosXPosY", PosX, PosY);
 	
@@ -26,10 +25,10 @@ function lunaMaurer () {
 }
 
 //studioMoniker
-function studioMoniker () {
+function studioMoniker (shapeWidth, shapeHeight) {
 
-	var PosX = getRandomInt(0, vWidth-200);
-	var PosY = getRandomInt(0, vHeight-200);
+	var PosX = getRandomInt(0, vWidth-shapeWidth);
+	var PosY = getRandomInt(0, vHeight-shapeHeight);
 
 	console.log("SM PosXPosY", PosX, PosY);
 	
@@ -40,10 +39,10 @@ function studioMoniker () {
 }
 
 //date
-function date () {
+function date (shapeWidth, shapeHeight) {
 
-	var PosX = getRandomInt(0, vWidth-300);
-	var PosY = getRandomInt(0, vHeight-40);
+	var PosX = getRandomInt(0, vWidth-shapeWidth);
+	var PosY = getRandomInt(0, vHeight-shapeHeight);
 
 	console.log("date PosXPosY", PosX, PosY);
 	
@@ -53,16 +52,11 @@ function date () {
 	});
 }
 
-	// $('.date').css({
-	// 	'top': PosY,
-	// 	'left': PosX
-	// });
-
 //time
-function time () {
+function time (shapeWidth, shapeHeight) {
 
-	var PosX = getRandomInt(0, vWidth-100);
-	var PosY = getRandomInt(0, vHeight-50);
+	var PosX = getRandomInt(0, vWidth-shapeWidth);
+	var PosY = getRandomInt(0, vHeight-shapeHeight);
 
 	console.log("time PosXPosY", PosX, PosY);
 	
@@ -70,7 +64,6 @@ function time () {
 		'top': PosY,
 		'left': PosX
 	});
-
 
 	$("#blink").each(function() {
 		var elem = $(this);
@@ -85,10 +78,10 @@ function time () {
 }
 
 //place
-function place () {
+function place (shapeWidth, shapeHeight) {
 
-	var PosX = getRandomInt(0, vWidth-100);
-	var PosY = getRandomInt(0, vHeight-50);
+	var PosX = getRandomInt(0, vWidth-shapeWidth);
+	var PosY = getRandomInt(0, vHeight-shapeHeight);
 
 	console.log("place PosXPosY", PosX, PosY);
 	
@@ -122,33 +115,18 @@ function toggle () {
 	})
 
 	$('.description').click(function() {
-		$('p').toggle('slow', function() {
-			// skew();
-		})
+		$('p').toggle();
 	})
 
 }
 
-// //skew
-// function skew () {
-
-// 	$('div:not(.reset, .description)').hover(function() {
-
-// 		var randoNumSkew = Math.floor(Math.random() * 10);
-// 		var randoNumScale = Math.floor(Math.random() * 3);
-
-// 		$(this).css("transform", 'scale(' + randoNumScale + ') ' + 'skewX(' + randoNumSkew + 'deg)');
-// 	}, function() { 
-// 		$(this).css("transform", 'skewX(' + 0 + 'deg)');
-// 	});
-// }
-
 //execute functions
-	lunaMaurer();
-	studioMoniker();
-	date();
-	time();
-	place();
+	lunaMaurer(1000, 400);
+	studioMoniker(200, 200);
+	date(300, 100);
+	time(300, 100);
+	place(50, 150);
+
 	toggle();
 
 });

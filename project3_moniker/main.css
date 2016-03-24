@@ -35,16 +35,13 @@ h1, h2, h3, h4, p {
 	line-height: 1.3em;
 }
 
-.studio-moniker {
-	z-index: 1;
-	background-color: rgba(255, 0, 0, 0.5);
-	color: rgba(0,0,0,0.5);
-	border-radius: 50%;
-	overflow: visible;
-
-	line-height: 200px;
-	width: 200px;
-	height: 200px;
+.time {
+	z-index: 3;
+	width: 100px;
+	height: 50px;
+	border: solid 1px green;
+	font-size: 6em;
+	color: rgba(0,0,255,0.75);
 }
 
 .date {
@@ -57,22 +54,16 @@ h1, h2, h3, h4, p {
 	background-color: rgba(0,0,255,0.5);
 }
 
-.time {
-	z-index: 3;
-	width: 100px;
-	height: 50px;
-	border: solid 1px green;
-	font-size: 5em;
-	color: rgba(0,0,255,0.75);
-}
-
 .place {
-	z-index: 3;
-	width: 100px;
-	height: 50px;
-	font-size: 3em;
-	border: solid 1px red;
-	color: rgba(255,0,0,0.5);
+	z-index: 1;
+	background-color: rgba(255, 0, 0, 0.5);
+	color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	font-size: 2em;
+
+	line-height: 200px;
+	width: 200px;
+	height: 200px;
 }
 
 .description {
@@ -100,6 +91,18 @@ h1, h2, h3, h4, p {
 .blink {
 	visibility: visible;
 }
+
+#moniker {
+	color: rgba(255,0,0,1);
+}
+
+/*moniker crash*/
+.moniker {
+	float: left;
+	font-size: 1em;
+	color: rgba(255,0,0,0.25);
+}
+
 
 @media print {
 	@page {
