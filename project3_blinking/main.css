@@ -90,9 +90,15 @@ h1, h2, h3, h4, p {
 }
 
 .reset {
+	position: fixed;
 	bottom: 1%;
 	left: 1%;
 	text-decoration: none;
+	z-index: 1000;
+}
+
+.blink {
+	visibility: visible;
 }
 
 @media print {

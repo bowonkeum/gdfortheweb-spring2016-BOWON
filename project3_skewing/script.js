@@ -120,11 +120,12 @@ function toggle () {
 //skew
 function skew () {
 
-	$('div').hover(function() {
+	$('div:not(.reset, .description)').hover(function() {
 
-		var randoNum = Math.floor(Math.random() * 50);
+		var randoNumSkew = Math.floor(Math.random() * 10);
+		var randoNumScale = Math.floor(Math.random() * 3);
 
-		$(this).css("transform", 'skewX(' + randoNum + 'deg)');
+		$(this).css("transform", 'scale(' + randoNumScale + ') ' + 'skewX(' + randoNumSkew + 'deg)');
 	}, function() { 
 		$(this).css("transform", 'skewX(' + 0 + 'deg)');
 	});
@@ -137,4 +138,5 @@ function skew () {
 	time();
 	place();
 	toggle();
+
 });
