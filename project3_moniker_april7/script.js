@@ -81,37 +81,37 @@ function place (shapeWidth, shapeHeight) {
 //toggling
 function toggleThis () {
 	
-	$('.luna-maurer').click(function() {
-		$('.date > p').toggle();
-	})
-
-	$('.date').click(function() {
-		$('.time > p').toggle();
-	})
-
-	$('.time').click(function() {
-		$('.place > p').toggle();
-	})
-
-	$('.place').click(function() {
-		$('.luna-maurer > p').toggle();
-	})
-
 	// $('.luna-maurer').click(function() {
-	// 	$('h1').toggle();
+	// 	$('.date > p').toggle();
 	// })
 
 	// $('.date').click(function() {
-	// 	$('.date > h3').toggle();
+	// 	$('.time > p').toggle();
 	// })
 
 	// $('.time').click(function() {
-	// 	$('.time > h3').toggle();
+	// 	$('.place > p').toggle();
 	// })
 
 	// $('.place').click(function() {
-	// 	$('.place > h3').toggle();
+	// 	$('.luna-maurer > p').toggle();
 	// })
+
+	$('.luna-maurer').click(function() {
+		$('.luna-maurer > p').toggle();
+	})
+
+	$('.date').click(function() {
+		$('.date > p').toggle();
+	})
+
+	$('.time').click(function() {
+		$('.time > p').toggle();
+	})
+
+	$('.place').click(function() {
+		$('.place > p').toggle();
+	})
 
 }
 

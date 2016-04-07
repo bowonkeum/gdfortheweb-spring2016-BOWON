@@ -1,0 +1,97 @@
+body {
+	margin: 0;
+	font-family: 'Helvetica';
+	font-size: 1.25rem;
+	letter-spacing: 0.005em;
+}
+
+/*.elements-container {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}*/
+
+.luna-maurer, .studio-moniker, .time, 
+.date, .place, .description, .reset {
+	position: absolute;
+	margin: 0;
+	text-align: center;
+	display: none;
+}
+
+p {
+	margin: 0;
+	font-weight: 400;
+}
+
+.luna-maurer {
+	z-index: 0;
+	background-color: rgba(0,255,0,0.75);
+	color: rgba(0,0,0,0.75);
+
+	width: 600px;
+	height: 300px;
+	text-align: left;
+	font-size: 10em;
+	line-height: 0.75em;
+}
+
+.time {
+	z-index: 3;
+	width: 100px;
+	height: 50px;
+	border: solid 1px green;
+	font-size: 4em;
+	color: rgba(0,0,255,0.75);
+}
+
+.date {
+	z-index: 1;
+	width: 300px;
+	height: 100px;
+	font-size: 4em;
+	line-height: 0.9em;
+	color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,255,0.75);
+}
+
+.place {
+	z-index: 1;
+	background-color: rgba(255, 0, 0, 0.57);
+	color: rgba(0,0,0,0.5);
+	border-radius: 50%;
+	font-size: 4em;
+
+	line-height: 200px;
+	width: 200px;
+	height: 200px;
+}
+
+.reset {
+	position: fixed;
+	bottom: 1%;
+	left: 1%;
+	text-decoration: none;
+	z-index: 1000;
+	border: solid 1px black;
+}
+
+#blink {
+	visibility: visible;
+}
+
+.moniker-star {
+	position: fixed;
+	margin: 0;
+	top: 1%;
+	left: 1%;
+	color: rgba(0,0,255,1);
+	font-size: 5em;
+}
+
+
+@media print {
+	@page {
+		size: landscape;
+	}
+}
