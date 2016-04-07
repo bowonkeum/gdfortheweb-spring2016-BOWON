@@ -82,24 +82,36 @@ function place (shapeWidth, shapeHeight) {
 function toggleThis () {
 	
 	$('.luna-maurer').click(function() {
-		$('h1').toggle();
+		$('.date > p').toggle();
 	})
 
 	$('.date').click(function() {
-		$('.date > h3').toggle();
+		$('.time > p').toggle();
 	})
 
 	$('.time').click(function() {
-		$('.time > h3').toggle();
+		$('.place > p').toggle();
 	})
 
 	$('.place').click(function() {
-		$('.place > h3').toggle();
+		$('.luna-maurer > p').toggle();
 	})
 
-	$('.description').click(function() {
-		$('p').toggle();
-	})
+	// $('.luna-maurer').click(function() {
+	// 	$('h1').toggle();
+	// })
+
+	// $('.date').click(function() {
+	// 	$('.date > h3').toggle();
+	// })
+
+	// $('.time').click(function() {
+	// 	$('.time > h3').toggle();
+	// })
+
+	// $('.place').click(function() {
+	// 	$('.place > h3').toggle();
+	// })
 
 }
 
@@ -113,7 +125,7 @@ function toggleThis () {
 
 	$('.moniker-star').click(function() {
 
-		$('div:not(body, .reset, .moniker-star)').html("studio&nbsp;moniker");
+		$('div:not(body, .reset, .moniker-star)').html("studio moniker").toggle();
 	});
 
 });
