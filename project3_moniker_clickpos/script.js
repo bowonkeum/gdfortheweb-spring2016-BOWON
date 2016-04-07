@@ -1,7 +1,7 @@
 //blinking time
 function blinking () {
 
-  $("#blink").each(function() {
+  $(".blink").each(function() {
     var elem = $(this);
     setInterval(function() {
       if (elem.css('visibility') == 'visible') {
@@ -9,7 +9,7 @@ function blinking () {
       } else {
         elem.css('visibility', 'visible');
       }
-    }, 500);
+    }, 800);
   });
 }
 
@@ -25,19 +25,26 @@ $(document).ready(function() {
   var i = 0;
 
   //clicking magic
-  $(document).click(function(){
+  $('.container').click(function(){
 
-      $allElements.eq(i).css({
-        "display": "block",
-        "position": "absolute",
-        "left": event.pageX,
-        "top": event.pageY,
-        'transform': 'rotate(' + getRandomFloat(-45,45) + 'deg) ' + 'scale(' + getRandomFloat(0.5,1.5) + ')'
-      });
-      
-      i = (i + 1) % $allElements.length;
-      $(document).append(eq(i));
-  });
+    $('.intro').hide();
+
+    $allElements.eq(i).css({
+      "display": "block",
+      "position": "absolute",
+      "left": event.pageX,
+      "top": event.pageY,
+      'transform': 'rotate(' + getRandomFloat(-45,45) + 'deg)'
+    });
+
+    i++ % $allElements.length;
+    $('.container').append(eq(i));
+
+      //break the loop
+      if (i == 4) {
+        return false;
+      }
+    });
 
   //fire blinking
   blinking();
