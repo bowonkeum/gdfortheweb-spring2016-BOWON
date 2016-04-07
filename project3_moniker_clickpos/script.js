@@ -14,8 +14,8 @@ function blinking () {
 }
 
 //randoFloatGenerator
-function getRandomFloat(min, max) {
-  return (Math.random() * (max - min)) + min;
+function getRandomInt(min, max) {
+  return Math.floor((Math.random() * (max - min)) + min);
 }
 
 /****GO TIME SHOW TIME****/
@@ -28,13 +28,13 @@ $(document).ready(function() {
   $('.container').click(function(){
 
     $('.intro').hide();
+    $('.reset-button').show();
 
     $allElements.eq(i).css({
       "display": "block",
       "position": "absolute",
       "left": event.pageX,
       "top": event.pageY,
-      'transform': 'rotate(' + getRandomFloat(-45,45) + 'deg)'
     });
 
     i++ % $allElements.length;
@@ -44,9 +44,28 @@ $(document).ready(function() {
       if (i == 4) {
         return false;
       }
-    });
+  });
 
   //fire blinking
   blinking();
+
+  //description show
+  $(".moniker-star").hover(function() {
+    $(".description").css({
+      "background": "white",
+      "z-index": 100
+    });
+
+    $(".description > p").css({
+      "visibility": "visible",
+    });
+  }, function() {
+    $(".description").css({
+      "background": "none",
+      "z-index": 0
+    });
+
+    $(".description > p").css("visibility", "hidden");
+  });
 
 });
