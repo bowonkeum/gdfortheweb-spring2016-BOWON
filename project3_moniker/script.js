@@ -36,7 +36,7 @@ $(document).ready(function() {
       "position": "absolute",
       "left": event.pageX,
       "top": event.pageY,
-      'transform': 'rotate(' + getRandomInt(0,90) + 'deg)'
+      'transform': 'rotate(' + getRandomInt(-90,90) + 'deg)'
     });
 
     i++ % $allElements.length;
