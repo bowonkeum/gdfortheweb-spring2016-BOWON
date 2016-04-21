@@ -1,119 +1,73 @@
-$(document).ready(function() {
-	console.log("ready!");
+//blinking time
+function blinking () {
 
-//viewport dimensions
-	var vWidth = $(window).width();
-	var vHeight = $(window).height();
+  $(".blink").each(function() {
+    var elem = $(this);
+    setInterval(function() {
+      if (elem.css('visibility') == 'visible') {
+        elem.css('visibility', 'hidden');
+      } else {
+        elem.css('visibility', 'visible');
+      }
+    }, 800);
+  });
+}
 
-//randoInt
+//randoFloatGenerator
 function getRandomInt(min, max) {
-	return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor((Math.random() * (max - min)) + min);
 }
 
-//lunaMaurer
-function lunaMaurer (shapeWidth, shapeHeight) {
+/****GO TIME SHOW TIME****/
+$(document).ready(function() {
 
-	var PosX = getRandomInt(0, vWidth-shapeWidth);
-	var PosY = getRandomInt(0, vHeight-shapeHeight);
+  var $allElements = $('.elements');
+  var i = 0;
 
-	console.log("LM PosXPosY", PosX, PosY);
-	
-	$('.luna-maurer').css({
-		'top': PosY,
-		'left': PosX,
-		'transform': 'rotate(' + getRandomInt(0,90) + 'deg)'
-	});
-}
+  //clicking magic
+  $('.container').click(function(){
 
-//date
-function date (shapeWidth, shapeHeight) {
+    $('.intro').hide();
+    $('.reset-button').show();
+    $('.print').show();
 
-	var PosX = getRandomInt(0, vWidth-shapeWidth);
-	var PosY = getRandomInt(0, vHeight-shapeHeight);
+    $allElements.eq(i).css({
+      "display": "block",
+      "position": "absolute",
+      "left": event.pageX,
+      "top": event.pageY,
+      'transform': 'rotate(' + getRandomInt(0,90) + 'deg)'
+    });
 
-	console.log("date PosXPosY", PosX, PosY);
-	
-	$('.date').css({
-	'top': PosY + 'px',
-	'left': PosX + 'px'
-	});
-}
+    i++ % $allElements.length;
+    $('.container').append(eq(i));
 
-//time
-function time (shapeWidth, shapeHeight) {
+      // //break the loop
+      // if (i == 4) {
+      //   return false;
+      // }
+  });
 
-	var PosX = getRandomInt(0, vWidth-shapeWidth);
-	var PosY = getRandomInt(0, vHeight-shapeHeight);
+  //fire blinking
+  blinking();
 
-	console.log("time PosXPosY", PosX, PosY);
-	
-	$('.time').css({
-		'top': PosY,
-		'left': PosX
-	});
+  //description show
+  $(".moniker-star").hover(function() {
+    $(".description").css({
+      "background": "white",
+      "z-index": 100
+    });
 
-	$("#blink").each(function() {
-		var elem = $(this);
-		setInterval(function() {
-			if (elem.css('visibility') == 'visible') {
-				elem.css('visibility', 'hidden');
-			} else {
-				elem.css('visibility', 'visible');
-			}
-		}, 500);
-	});
-}
+    $(".description > p").css({
+      "visibility": "visible",
+    });
+  }, function() {
+    $(".description").css({
+      "background": "none",
+      "z-index": 0
+    });
 
-//place
-function place (shapeWidth, shapeHeight) {
-
-	var PosX = getRandomInt(0, vWidth-shapeWidth);
-	var PosY = getRandomInt(0, vHeight-shapeHeight);
-
-	console.log("place PosXPosY", PosX, PosY);
-	
-	$('.place').css({
-		'top': PosY,
-		'left': PosX
-	});
-}
-
-//toggling
-function toggleThis () {
-	
-	$('.luna-maurer').click(function() {
-		$('h1').toggle();
-	})
-
-	$('.date').click(function() {
-		$('.date > h3').toggle();
-	})
-
-	$('.time').click(function() {
-		$('.time > h3').toggle();
-	})
-
-	$('.place').click(function() {
-		$('.place > h3').toggle();
-	})
-
-	$('.description').click(function() {
-		$('p').toggle();
-	})
-
-}
-
-//execute functions
-	lunaMaurer(1000, 400);
-	date(300, 100);
-	time(500, 100);
-	place(200, 200);
-
-	toggleThis();
-
-	$('.moniker-star').click(function() {
-
-		$('div:not(body, .reset, .moniker-star)').html("studio&nbsp;moniker");
-	});
+    $(".description > p").css("visibility", "hidden");
+  });
 
 });
