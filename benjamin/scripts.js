@@ -60,7 +60,7 @@ $(document).ready(function() {
 		var inputObject = $("#input-object").val();
 		getFlickrData(inputObject);
 
-		$("body").append("<div class='page'><div class='object-output'></div></div>");
+		$("body").append("<div class='page'><div class='object-output'>" + "</div></div>");
 
 		window.print();
 
