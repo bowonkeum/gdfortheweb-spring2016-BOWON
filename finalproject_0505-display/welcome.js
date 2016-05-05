@@ -1,0 +1,14 @@
+// var address = prompt("Enter mailing address");
+
+// 	if (name != true) {
+// 		$(".mailingaddress").append(address);
+// 	}
+// 	else {
+// 	}
+
+	/*YO SO I CAN DO 3 DIRECTIONS HERE: 1: "SLOW DOWN THE INTERNET 1, WHERE IT'S A
+	MAILING ADDRESS THAT I INPUT, THAT TURNS UP AFTER PRINT. (IMAGE WILL NOT SHOW)
+	(ONLY THE DESCRIPTION / METADATA) (YOU PRESS A BUTTON AND IT APPEARS IN THE
+	PRINT DIALOGUE OR MAYBE AS AN EMAIL ATTACHMENT)
+
+	2, WHERE IT'S TOTALLY ABOUT "*/

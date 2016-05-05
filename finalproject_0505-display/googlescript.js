@@ -1,24 +1,22 @@
 /*
-Flickr
+Google
 url: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-key: 30cfef3f3752b0b4dcdb0cd6fb9f7bea
+key: AIzaSyBtQ5gm0XphLLlnQRj0_t12X3D83AApXy8
 secret: 6b3ee47fc60b1322
 
 URL for JSON and text
-https://api.flickr.com/services/rest/
-?method=flickr.photos.search&api_key=
-c7f05f525bd700aff6b4a17290941d3c
-&text=haze
-&format=json
-&nojsoncallback=1
+GET https://www.googleapis.com/customsearch/v1
+?key=INSERT_YOUR_API_KEY&cx=017576662512468239146:omuauf_lfve
+&q=
+lectures
 */
 
 //Flickr search for image using weatherDescr
 function getFlickrData(inputObject) {
-	var flickrURL = "https://api.flickr.com/services/rest/" 
-					+ "?method=flickr.photos.search&api_key="
-					+ "30cfef3f3752b0b4dcdb0cd6fb9f7bea" 
-					+ "&text=" + inputObject
+	var flickrURL = "https://www.googleapis.com/customsearch/v1?key=" 
+					+ "AIzaSyBtQ5gm0XphLLlnQRj0_t12X3D83AApXy8"
+					+ "&cx=017576662512468239146:omuauf_lfve&q=" 
+					+ inputObject
 					+ "&sort=" + "relevance" //documentation, we want them to sort
 					+ "&format=json" + "&nojsoncallback=1";
 

@@ -1,0 +1,34 @@
+.triplecanopy {
+	display: block;
+	position: absolute;
+	z-index: -1000;
+	font-size: 5.5em;
+	line-height: 0.9em;
+	letter-spacing: -0.02em;
+}
+
+.address {
+	display: block;
+	position: absolute;
+	bottom: 50px;
+	
+	z-index: -1000;
+	font-size: 2em;
+	line-height: 0.9em;
+	letter-spacing: -0.02em;
+}
+
+.object-output {
+	height: 50%;
+	width: 50%;
+	text-align: center;
+	background-color: none;
+	background-repeat: no-repeat;
+	display: block;
+
+	filter: grayscale(0%) blur(0px);
+}
+
+a, input, button, .title, .filename-container {
+	display: none;
+}
