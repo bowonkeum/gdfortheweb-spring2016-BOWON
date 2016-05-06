@@ -90,3 +90,19 @@ button {
 	height: 90%;
 	filter: grayscale(100%) blur(10px);
 }
+
+.object-output-new {
+	position: relative;
+	margin: 0 auto;
+
+	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+
+  	background-repeat: no-repeat;
+
+	width: 90%;
+	height: 90%;
+	filter: grayscale(100%) blur(10px);
+}

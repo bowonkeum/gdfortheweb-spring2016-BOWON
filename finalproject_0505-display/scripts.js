@@ -1,18 +1,3 @@
-/*
-Flickr
-url: https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
-key: 30cfef3f3752b0b4dcdb0cd6fb9f7bea
-secret: 6b3ee47fc60b1322
-
-URL for JSON and text
-https://api.flickr.com/services/rest/
-?method=flickr.photos.search&api_key=
-c7f05f525bd700aff6b4a17290941d3c
-&text=haze
-&format=json
-&nojsoncallback=1
-*/
-
 //viewport dimensions
 var vWidth = $(window).width();
 var vHeight = $(window).height();
@@ -34,25 +19,30 @@ var i = 1;
 function receivedImage(url) {
 	console.log(url);
 
-	$(".object-output").css("background-image", "url(" + url + ")" );
+	//formerly known as "dump"
+	//this is setting the stage
+	$("body").append("<div class='page'><div class='object-output'></div></div>");
 
-		//css transformations
-		$(".page").eq(i).css({
+	//saves the latest ".object-output" class as a new variable
+	//otherwise, just ".object-output" is changing ALL the object-outputs
+	var $output = $(".object-output").last();
+
+	//is referring to the 'page' class of the latest ".object-output" class
+	//saves it as a new variable, "page", which is specific (just using .page
+	//will refer to ALL the pages
+	var $page = $output.parent();
+
+	//refers only to the output
+	$output.css("background-image", "url(" + url + ")" );
+
+	//css transformations for the page
+	$page.css({
 		"left": PosX,
 		"top": PosY,
 		'transform': 'rotate(' + getRandomInt(-90,90) + 'deg)'
 	});//end css transformations
 }
 
-
-function dump() {
-
-	//append to body
-	$("body").append("<div class='page'><div class='object-output'></div></div>");
-
-	//print to make sure
-	console.log("X coord: "+ PosX + " / Y coord: " + PosY);
-}
 
 //Flickr search for image
 function getFlickrData(inputObject) {
@@ -78,6 +68,8 @@ function getFlickrData(inputObject) {
 			// console.log(imgURL);
 
 			receivedImage(imgURL);
+			//put url into the object-output div as a background
+
 		} //endsuccess
 	});//end ajax call
 
@@ -88,19 +80,21 @@ $(document).ready(function() {
 	console.log("Ready!");
 
 	$("button").click(function() {
-		$("a").css("visibility", "visible");
-
-		j++;
-
+		
 		var inputObject = $("#input-object").val();
-		getFlickrData(inputObject);
 		$(".filename-container").append(inputObject + j + ".jpg<br>");
+
+		getFlickrData(inputObject);
 		//stop when j==24
 
 		//counts how many clicks, goes down Flickr search
 		count ++;
 
-		dump();
+		//turning the link visible after the search goes
+		$("a").css("visibility", "visible");
+
+		//counter for the Flickr items
+		j++;
 	})//end click function
 
 	$("a").click(function() {
@@ -110,4 +104,5 @@ $(document).ready(function() {
 		$(".address").append(address);
 	})
 });
+
 
