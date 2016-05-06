@@ -1,0 +1,17 @@
+
+
+.object-output {
+	height: 90%;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	background-color: none;
+	background-repeat: no-repeat;
+	display: block;
+
+	filter: grayscale(0%) blur(0px);
+}
+
+a, input, button, .title, .filename-container {
+	display: none;
+}
