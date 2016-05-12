@@ -83,6 +83,7 @@ $(document).ready(function() {
 		
 		var inputObject = $("#input-object").val();
 		$(".filename-container").append(inputObject + j + ".jpg<br>");
+		// var inputObjects = $("filename-container").innerHTML;
 
 		getFlickrData(inputObject);
 		//stop when j==24
@@ -99,9 +100,17 @@ $(document).ready(function() {
 
 	$("a").click(function() {
 		var address = prompt("Enter your mailing address");
+		if (address != null) {
+			alert("Thank you! The following images " + 
+				// inputObjects + 
+				"will be sent to\n\n" + address + "\n\nin 3–5 days!");
+		}
+		else {
+			alert("Access to these images is denied.");
+		}
 
 		window.print();
-		$(".address").append(address);
+		// $(".address").append(address);
 	})
 });
 
